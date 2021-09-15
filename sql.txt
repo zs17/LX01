@@ -1,0 +1,31 @@
+DROP DATABASE IF EXISTS Works;
+CREATE DATABASE Works DEFAULT CHARSET=GBK;
+
+USE Works;
+CREATE TABLE UserInfo
+(
+UserName nvarchar(50) Primary key,
+Password nvarchar(50) not null,
+QQ nvarchar(12),
+Email nvarchar(50),
+Type nchar(10) not null,
+UserImg nvarchar(250)
+) ;
+
+CREATE TABLE Acitvity
+(
+ActivityID int Primary key auto_increment,
+ActivityName,
+EndTime,
+ActivityPicture,
+ActivityIntroduction,
+Summary,
+ActivityVerify nchar(10) not null DEFAULT '´ýÉóºË',
+ActivityStatus,
+UserName
+) ;
+CREATE TABLE WorkInfo
+(
+WorkID int Primary key auto_increment,
+WorkName,
+WorkPicture,
